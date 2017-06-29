@@ -56,7 +56,7 @@ func TestWikipedia(t *testing.T) {
 		graph.AddEdge(e.From, e.To)
 	}
 
-	result, ok := graph.Toposort()
+	result, ok := graph.ToposortStable()
 	if !ok {
 		t.Errorf("closed path detected in no closed pathed graph")
 	}
